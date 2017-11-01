@@ -1,15 +1,15 @@
 
 puts "Give me a starting date"
-st_date = gets.chomp.to_i
+start_yr = gets.chomp.to_i
 puts "Give me an end date"
-en_date = gets.chomp.to_i
+finish_yr = gets.chomp.to_i
 puts
 
 puts "The leap years in the range you have provided are:"
-while st_date <= en_date
-  if (st_date%4 == 0) || (st_date%400 == 0)
-    puts st_date unless (st_date%100==0)
+while start_yr <= finish_yr
+  if (start_yr%4 == 0) || (start_yr%400 == 0)
+    puts start_yr unless (start_yr%100==0)
     end
-  st_date += 1
+  start_yr += 1
 end
 puts
