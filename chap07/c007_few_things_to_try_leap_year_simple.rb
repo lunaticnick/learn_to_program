@@ -12,7 +12,7 @@ while start_yr<=finish_yr
 if start_yr%400==0
   puts start_yr
 elsif start_yr%100 == 0
-  puts "NOT A LEAP YEAR"
+  
 elsif start_yr%4==0
   puts start_yr
 end
