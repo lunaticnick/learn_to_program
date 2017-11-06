@@ -1,9 +1,10 @@
+#  Define where pictures will be moved.
 Dir.chdir "/Users/nikolaos/Desktop/renamed_pics"
 #  First we find all of the pictures to be moved.
 pic_names = Dir['/Users/nikolaos/Desktop/pic_to_rename/*.{JPG,jpg}']
 
 
-
+#  Give the name of the photo batch
 puts 'What would you like to call this batch?'
 batch_name = gets.chomp
 
@@ -21,13 +22,16 @@ print '.' # This is our "progress bar".
     "#{batch_name}#{pic_number}.jpg"
   end
 
+# Protect from overwriting something accidentally
   if File.exist? new_name
     puts "File Already exists"
     exit
   else
     File.rename name, new_name
   end
- #  Finally, we increment the counter.
+
+
+ #  Finally, we increment the photo number counter.
   pic_number = pic_number + 1
 end
 
