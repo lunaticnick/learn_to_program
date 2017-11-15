@@ -3,8 +3,8 @@ def shuffle array
   while array.length > 0
     # Randomly pick one element of the array.
     rand_index = rand(array.length)
-    # Now go through each item in the array,
-    # putting them all into new_arr except for the # randomly chosen one, which goes into shuffle_ray.
+    # Now go through each item in the array,putting them all into new_arr
+    # except for the randomly chosen one, which goes into shuffle_ray.
     curr_index = 0
     new_array = []
     array.each do |item|
@@ -16,7 +16,7 @@ def shuffle array
           curr_index +=  1
     end
 
-    # Replace the original array with the new, # smaller array.
+    # Replace the original array with the new, smaller array.
     array = new_array
   end
   shuffle_array
